@@ -44,19 +44,53 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-.hero {
-    background: #282828;
-    padding: 100px 0;
+.hero, .upload, .account {
+    padding: 50px 0;
     text-align: center;
 }
 
-.hero h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
+.hero h2, .upload h2, .account h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.2em;
+}
+
+.upload form, .account form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload form label, .account form label {
+    margin: 10px 0 5px;
+}
+
+.upload form input, .account form input, .upload form select {
+    margin: 5px 0 20px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.upload form button, .account form button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload form button:hover, .account form button:hover {
+    background-color: #e64a19;
 }
 
 .music-gallery {
@@ -113,4 +147,3 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-
