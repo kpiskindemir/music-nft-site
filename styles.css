@@ -151,9 +151,9 @@ footer {
 /* Styling for the license table */
 .license-table {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .license-column {
