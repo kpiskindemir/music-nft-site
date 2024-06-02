@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Müzik NFT Satış Sitesi</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -15,23 +14,43 @@
       <h1>Müzik NFT Satış Sitesi</h1>
       <nav>
         <ul>
-          <li><a href="#">Ana Sayfa</a></li>
-          <li><a href="#">Hesap</a></li>
-          <li><a href="#">Keşfet</a></li>
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#account">Hesap</a></li>
+          <li><a href="#explore">Keşfet</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="container">
         <h2>Öne Çıkan Müzikler</h2>
         <p>En popüler ve trend olan müzikler burada</p>
       </div>
     </section>
 
-    <section class="music-gallery">
+    <section id="upload" class="upload">
+      <div class="container">
+        <h2>Müzik Yükle</h2>
+        <form id="uploadForm">
+          <label for="musicFile">Müzik Dosyası:</label>
+          <input type="file" id="musicFile" name="musicFile" accept="audio/*" required>
+          <label for="coverImage">Albüm Kapağı:</label>
+          <input type="file" id="coverImage" name="coverImage" accept="image/*" required>
+          <label for="musicTitle">Müzik Başlığı:</label>
+          <input type="text" id="musicTitle" name="musicTitle" required>
+          <label for="musicLicense">Lisans Türü:</label>
+          <select id="musicLicense" name="musicLicense" required>
+            <option value="standard">Standart Lisans</option>
+            <option value="premium">Premium Lisans</option>
+          </select>
+          <button type="submit">NFT Oluştur</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="gallery" class="music-gallery">
       <div class="container">
         <h2>Müzik Galerisi</h2>
         <div class="grid">
@@ -78,6 +97,19 @@
         </div>
       </div>
     </section>
+
+    <section id="account" class="account">
+      <div class="container">
+        <h2>Hesap Oluştur</h2>
+        <form id="accountForm">
+          <label for="username">Kullanıcı Adı:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="wallet">Cüzdan Adresi:</label>
+          <input type="text" id="wallet" name="wallet" required>
+          <button type="submit">Hesap Oluştur ve Cüzdan Bağla</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -90,3 +122,4 @@
 </body>
 
 </html>
+
