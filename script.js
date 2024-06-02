@@ -3,7 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   accountForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // Hesap oluşturma ve cüzdan bağlama işlemleri burada yapılacak
-    alert('Hesap oluşturuldu ve cüzdan bağlandı!');
+    alert('Account created and wallet connected!');
+  });
+
+  document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const price = button.getAttribute('data-price');
+      const title = button.getAttribute('data-title');
+      alert(`You are about to buy ${title} for ${price} ETH!`);
+    });
   });
 });
+
