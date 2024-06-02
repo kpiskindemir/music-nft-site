@@ -14,3 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
     alert('Hesap oluşturuldu ve cüzdan bağlandı!');
   });
 });
+
