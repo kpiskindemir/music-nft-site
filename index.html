@@ -33,20 +33,40 @@
 
     <section id="upload" class="upload">
       <div class="container">
-        <h2>Müzik Yükle</h2>
-        <form id="uploadForm">
+        <h2>Müzik NFT Oluştur</h2>
+        <form id="uploadMusicForm">
           <label for="musicFile">Müzik Dosyası:</label>
           <input type="file" id="musicFile" name="musicFile" accept="audio/*" required>
-          <label for="coverImage">Albüm Kapağı:</label>
-          <input type="file" id="coverImage" name="coverImage" accept="image/*" required>
           <label for="musicTitle">Müzik Başlığı:</label>
           <input type="text" id="musicTitle" name="musicTitle" required>
           <label for="musicLicense">Lisans Türü:</label>
           <select id="musicLicense" name="musicLicense" required>
             <option value="standard">Standart Lisans</option>
             <option value="premium">Premium Lisans</option>
+            <option value="exclusive">Exclusive Lisans</option>
+            <option value="commercial">Ticari Lisans</option>
           </select>
-          <button type="submit">NFT Oluştur</button>
+          <button type="submit">Müzik NFT Oluştur</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="uploadCover" class="upload">
+      <div class="container">
+        <h2>Albüm Kapağı NFT Oluştur</h2>
+        <form id="uploadCoverForm">
+          <label for="coverImage">Albüm Kapağı:</label>
+          <input type="file" id="coverImage" name="coverImage" accept="image/*" required>
+          <label for="coverTitle">Albüm Kapağı Başlığı:</label>
+          <input type="text" id="coverTitle" name="coverTitle" required>
+          <label for="coverLicense">Lisans Türü:</label>
+          <select id="coverLicense" name="coverLicense" required>
+            <option value="standard">Standart Lisans</option>
+            <option value="premium">Premium Lisans</option>
+            <option value="exclusive">Exclusive Lisans</option>
+            <option value="commercial">Ticari Lisans</option>
+          </select>
+          <button type="submit">Albüm Kapağı NFT Oluştur</button>
         </form>
       </div>
     </section>
@@ -109,6 +129,38 @@
           <input type="text" id="wallet" name="wallet" required>
           <button type="submit">Hesap Oluştur ve Cüzdan Bağla</button>
         </form>
+      </div>
+    </section>
+
+    <section id="licenseInfo" class="license-info">
+      <div class="container">
+        <h2>Lisans Türleri</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Lisans Türü</th>
+              <th>Açıklama</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Standart Lisans</td>
+              <td>Sadece dinleme amaçlı kullanım</td>
+            </tr>
+            <tr>
+              <td>Premium Lisans</td>
+              <td>Şahsi projelerde kullanım</td>
+            </tr>
+            <tr>
+              <td>Exclusive Lisans</td>
+              <td>Yalnızca bir kullanıcı tarafından kullanılır</td>
+            </tr>
+            <tr>
+              <td>Ticari Lisans</td>
+              <td>Video ve film projelerinde kullanım</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
