@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const uploadForm = document.getElementById('uploadForm');
+  const uploadMusicForm = document.getElementById('uploadMusicForm');
+  const uploadCoverForm = document.getElementById('uploadCoverForm');
   const accountForm = document.getElementById('accountForm');
 
-  uploadForm.addEventListener('submit', (event) => {
+  uploadMusicForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // NFT oluşturma işlemleri burada yapılacak
-    alert('NFT Oluşturuldu!');
+    // Müzik NFT oluşturma işlemleri burada yapılacak
+    alert('Müzik NFT Oluşturuldu!');
+  });
+
+  uploadCoverForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    // Albüm Kapağı NFT oluşturma işlemleri burada yapılacak
+    alert('Albüm Kapağı NFT Oluşturuldu!');
   });
 
   accountForm.addEventListener('submit', (event) => {
