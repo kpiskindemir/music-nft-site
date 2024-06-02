@@ -33,25 +33,28 @@ main {
 }
 
 .music-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
 .music-item {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 10px;
     padding: 10px;
     text-align: center;
-    width: 45%;
 }
 
 .music-item img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+.music-info {
+    padding: 10px 0;
 }
 
 footer {
