@@ -44,12 +44,12 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-.hero, .upload, .account {
+.hero, .upload, .account, .license-info {
     padding: 50px 0;
     text-align: center;
 }
 
-.hero h2, .upload h2, .account h2 {
+.hero h2, .upload h2, .account h2, .license-info h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -146,4 +146,27 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Styling for the license table */
+.license-info table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.license-info th, .license-info td {
+  padding: 10px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+.license-info th {
+  background-color: #333;
+  color: #fff;
+}
+
+.license-info td {
+  background-color: #1f1f1f;
+  color: #fff;
 }
