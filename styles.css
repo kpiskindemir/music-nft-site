@@ -20,6 +20,10 @@ header {
     background-color: #1f1f1f;
     padding: 20px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -28,21 +32,28 @@ header h1 {
 
 nav ul {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 .hero {
     text-align: center;
     padding: 100px 0;
+    margin-top: 80px;
 }
 
 .hero h2 {
@@ -169,9 +180,68 @@ nav ul li a {
     background-color: #e64a19;
 }
 
+.comments {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.comments h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.comments form {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.comments label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.comments input,
+.comments textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.comments button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comments button:hover {
+    background-color: #e64a19;
+}
+
+.comment {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
 footer {
     background-color: #1f1f1f;
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
 }
