@@ -1,36 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
   const uploadForm = document.getElementById('uploadForm');
   const accountForm = document.getElementById('accountForm');
-  let isAlbumCover = true;
+  const musicFileInput = document.getElementById('musicFile');
+  const coverImageInput = document.getElementById('coverImage');
+  const uploadMusicButton = document.getElementById('uploadMusicButton');
+  const uploadCoverButton = document.getElementById('uploadCoverButton');
 
   uploadForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // NFT creation logic here
-    alert('NFT Created!');
+
+    const formData = new FormData(uploadForm);
+
+    fetch('/upload', {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   });
 
   accountForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // Account creation and wallet connection logic here
-    alert('Account created and wallet connected!');
+
+    const formData = new FormData(accountForm);
+
+    fetch('/account', {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   });
 
-  window.toggleUpload = function() {
-    const uploadButton = document.getElementById('uploadButton');
-    const musicFileInput = document.getElementById('musicFile');
-    const coverImageInput = document.getElementById('coverImage');
+  uploadMusicButton.addEventListener('click', () => {
+    musicFileInput.click();
+  });
 
-    if (isAlbumCover) {
-      uploadButton.textContent = 'Upload Music File';
-      coverImageInput.style.display = 'block';
-      musicFileInput.style.display = 'none';
-    } else {
-      uploadButton.textContent = 'Upload Album Cover';
-      coverImageInput.style.display = 'none';
-      musicFileInput.style.display = 'block';
-    }
-
-    isAlbumCover = !isAlbumCover;
-  };
+  uploadCoverButton.addEventListener('click', () => {
+    coverImageInput.click();
+  });
 });
-
