@@ -35,14 +35,16 @@
       <div class="container">
         <h2>Upload Music</h2>
         <form id="uploadForm">
+          <label for="musicFile">Music File:</label>
+          <button type="button" id="uploadMusicButton" onclick="document.getElementById('musicFile').click()">Upload Music File</button>
+          <input type="file" id="musicFile" name="musicFile" accept="audio/*" style="display: none;" required>
+          
+          <label for="coverImage">Album Cover:</label>
+          <button type="button" id="uploadCoverButton" onclick="document.getElementById('coverImage').click()">Upload Album Cover</button>
+          <input type="file" id="coverImage" name="coverImage" accept="image/*" style="display: none;" required>
+          
           <label for="musicTitle">Music Title:</label>
           <input type="text" id="musicTitle" name="musicTitle" required>
-          
-          <label for="uploadButton">Upload Files:</label>
-          <button id="uploadButton" type="button" onclick="toggleUpload()">Upload Album Cover</button>
-          
-          <input type="file" id="musicFile" name="musicFile" accept="audio/*" required style="display: none;">
-          <input type="file" id="coverImage" name="coverImage" accept="image/*" required style="display: none;">
           
           <label for="musicLicense">License Type:</label>
           <select id="musicLicense" name="musicLicense" required>
@@ -50,6 +52,7 @@
             <option value="premium">Premium License</option>
             <option value="exclusive">Exclusive License</option>
           </select>
+          
           <button type="submit">Create NFT</button>
         </form>
       </div>
