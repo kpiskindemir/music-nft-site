@@ -58,17 +58,24 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-.upload form, .account form {
+.upload .cover-photo {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.account form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.upload form label, .account form label {
+.account form label {
     margin: 10px 0 5px;
 }
 
-.upload form input, .account form input, .upload form select {
+.account form input {
     margin: 5px 0 20px;
     padding: 10px;
     width: 80%;
@@ -79,7 +86,7 @@ nav ul li a {
     color: #ffffff;
 }
 
-.upload form button, .account form button {
+.account form button {
     padding: 10px 20px;
     background-color: #ff5722;
     color: #ffffff;
@@ -89,7 +96,7 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-.upload form button:hover, .account form button:hover {
+.account form button:hover {
     background-color: #e64a19;
 }
 
@@ -136,6 +143,12 @@ nav ul li a {
     font-size: 1.5em;
 }
 
+.music-info p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ffab40;
+}
+
 .music-info audio {
     width: 100%;
     margin-top: 10px;
@@ -147,4 +160,3 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-
