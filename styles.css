@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 .container {
@@ -17,14 +17,15 @@ body {
 }
 
 header {
-    background-color: #222;
-    color: #fff;
+    background-color: #1f1f1f;
+    color: #ffffff;
     padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -38,14 +39,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.2em;
 }
 
 .hero {
-    background: url('hero-background.jpg') no-repeat center center/cover;
-    color: #fff;
+    background: #282828;
     padding: 100px 0;
     text-align: center;
 }
@@ -57,8 +57,6 @@ nav ul li a {
 
 .hero p {
     font-size: 1.2em;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .music-gallery {
@@ -73,14 +71,13 @@ nav ul li a {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .music-item {
-    background-color: #fff;
+    background-color: #1f1f1f;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     transition: transform 0.2s;
@@ -92,8 +89,8 @@ nav ul li a {
 
 .music-item img {
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+    height: 200px;
+    object-fit: cover;
 }
 
 .music-info {
@@ -111,8 +108,9 @@ nav ul li a {
 }
 
 footer {
-    background-color: #222;
-    color: #fff;
+    background-color: #1f1f1f;
+    color: #ffffff;
     text-align: center;
     padding: 20px 0;
 }
+
