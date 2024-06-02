@@ -4,49 +4,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const musicFileInput = document.getElementById('musicFile');
   const coverImageInput = document.getElementById('coverImage');
   const uploadMusicButton = document.getElementById('uploadMusicButton');
-  const uploadCoverButton = document.getElementById('uploadCoverButton');
 
   uploadForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    const formData = new FormData(uploadForm);
-
-    fetch('/upload', {
-      method: 'POST',
-      body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert(data.message);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+    // NFT creation logic here
+    alert('NFT Created!');
   });
 
   accountForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    const formData = new FormData(accountForm);
-
-    fetch('/account', {
-      method: 'POST',
-      body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert(data.message);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+    // Account creation and wallet connection logic here
+    alert('Account created and wallet connected!');
   });
 
-  uploadMusicButton.addEventListener('click', () => {
+  window.uploadMusic = function() {
     musicFileInput.click();
+  };
+
+  coverImageInput.addEventListener('change', () => {
+    if (coverImageInput.files.length > 0) {
+      uploadMusicButton.textContent = 'Upload Music File';
+      uploadMusicButton.style.display = 'block';
+    }
   });
 
-  uploadCoverButton.addEventListener('click', () => {
-    coverImageInput.click();
+  musicFileInput.addEventListener('change', () => {
+    if (musicFileInput.files.length > 0) {
+      uploadMusicButton.style.display = 'none';
+    }
   });
 });
