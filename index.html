@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Müzik NFT Satış Sitesi</title>
+  <title>Music NFT Sales Site</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,12 +12,12 @@
 <body>
   <header>
     <div class="container">
-      <h1>Müzik NFT Satış Sitesi</h1>
+      <h1>Music NFT Sales Site</h1>
       <nav>
         <ul>
-          <li><a href="#home">Ana Sayfa</a></li>
-          <li><a href="#account">Hesap</a></li>
-          <li><a href="#explore">Keşfet</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#account">Account</a></li>
+          <li><a href="#explore">Explore</a></li>
         </ul>
       </nav>
     </div>
@@ -26,73 +26,68 @@
   <main>
     <section id="home" class="hero">
       <div class="container">
-        <h2>Öne Çıkan Müzikler</h2>
-        <p>En popüler ve trend olan müzikler burada</p>
+        <h2>Featured Music</h2>
+        <p>Discover the most popular and trending music here</p>
       </div>
     </section>
 
-    <section id="upload" class="upload">
+    <section id="new-albums" class="upload">
       <div class="container">
-        <h2>Müzik Yükle</h2>
-        <form id="uploadForm">
-          <label for="musicFile">Müzik Dosyası:</label>
-          <input type="file" id="musicFile" name="musicFile" accept="audio/*" required>
-          <label for="coverImage">Albüm Kapağı:</label>
-          <input type="file" id="coverImage" name="coverImage" accept="image/*" required>
-          <label for="musicTitle">Müzik Başlığı:</label>
-          <input type="text" id="musicTitle" name="musicTitle" required>
-          <label for="musicLicense">Lisans Türü:</label>
-          <select id="musicLicense" name="musicLicense" required>
-            <option value="standard">Standart Lisans</option>
-            <option value="premium">Premium Lisans</option>
-          </select>
-          <button type="submit">NFT Oluştur</button>
-        </form>
+        <h2>New Albums</h2>
+        <img src="https://github.com/USERNAME/REPOSITORY_NAME/raw/main/WhatsApp Image 2024-06-02 at 11.27.35.jpeg" alt="Album Cover Poster" class="cover-photo">
       </div>
     </section>
 
     <section id="gallery" class="music-gallery">
       <div class="container">
-        <h2>Müzik Galerisi</h2>
+        <h2>Music Gallery</h2>
         <div class="grid">
           <div class="music-item">
-            <img src="WhatsApp Image 2024-05-30 at 10.42.16.jpeg" alt="Albüm Kapak">
+            <img src="WhatsApp Image 2024-05-30 at 10.42.16.jpeg" alt="Album Cover">
             <div class="music-info">
               <h3>itsjustme</h3>
+              <p>Price: 0.5 ETH</p>
               <audio controls>
                 <source src="itsjustme.mp3" type="audio/mpeg">
-                Tarayıcınız audio elementini desteklemiyor.
+                Your browser does not support the audio element.
               </audio>
+              <button class="buy-button" data-price="0.5" data-title="itsjustme">Buy Now</button>
             </div>
           </div>
           <div class="music-item">
-            <img src="WhatsApp Image 2024-05-30 at 15.20.47.jpeg" alt="Albüm Kapak">
+            <img src="WhatsApp Image 2024-05-30 at 15.20.47.jpeg" alt="Album Cover">
             <div class="music-info">
               <h3>Lose You Final Master</h3>
+              <p>Price: 0.8 ETH</p>
               <audio controls>
                 <source src="Lose You Final Master.wav" type="audio/wav">
-                Tarayıcınız audio elementini desteklemiyor.
+                Your browser does not support the audio element.
               </audio>
+              <button class="buy-button" data-price="0.8" data-title="Lose You Final Master">Buy Now</button>
             </div>
           </div>
           <div class="music-item">
-            <img src="WhatsApp Image 2024-05-30 at 15.21.13.jpeg" alt="Albüm Kapak">
+            <img src="WhatsApp Image 2024-05-30 at 15.21.13.jpeg" alt="Album Cover">
             <div class="music-info">
               <h3>plsbelieveinme</h3>
+              <p>Price: 0.7 ETH</p>
               <audio controls>
                 <source src="plsbelieveinme.mp3" type="audio/mpeg">
-                Tarayıcınız audio elementini desteklemiyor.
+                Your browser does not support the audio element.
               </audio>
+              <button class="buy-button" data-price="0.7" data-title="plsbelieveinme">Buy Now</button>
             </div>
           </div>
           <div class="music-item">
-            <img src="WhatsApp Image 2024-05-30 at 15.21.19.jpeg" alt="Albüm Kapak">
+            <img src="WhatsApp Image 2024-05-30 at 15.21.19.jpeg" alt="Album Cover">
             <div class="music-info">
               <h3>where i belong?</h3>
+              <p>Price: 1.0 ETH</p>
               <audio controls>
-                <source src="where i belong?.mp3" type="audio/mpeg">
-                Tarayıcınız audio elementini desteklemiyor.
+                <source src="where_i_belong.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
               </audio>
+              <button class="buy-button" data-price="1.0" data-title="where i belong?">Buy Now</button>
             </div>
           </div>
         </div>
@@ -101,13 +96,13 @@
 
     <section id="account" class="account">
       <div class="container">
-        <h2>Hesap Oluştur</h2>
+        <h2>Create Account</h2>
         <form id="accountForm">
-          <label for="username">Kullanıcı Adı:</label>
+          <label for="username">Username:</label>
           <input type="text" id="username" name="username" required>
-          <label for="wallet">Cüzdan Adresi:</label>
+          <label for="wallet">Wallet Address:</label>
           <input type="text" id="wallet" name="wallet" required>
-          <button type="submit">Hesap Oluştur ve Cüzdan Bağla</button>
+          <button type="submit">Create Account and Connect Wallet</button>
         </form>
       </div>
     </section>
@@ -115,7 +110,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2024 Müzik NFT Satış Sitesi. Tüm hakları saklıdır.</p>
+      <p>&copy; 2024 Music NFT Sales Site. All rights reserved.</p>
     </div>
   </footer>
 
